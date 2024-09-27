@@ -36,11 +36,11 @@ add.addEventListener("click", function(){
     var nombre = document.getElementById("animal").value;
     var edad = document.getElementById("edad").value;
     var comentarios = document.getElementById("comentarios").value;
-    document.getElementById("Animales").innerHTML = "";
 
     if (nombre == "Seleccione un animal" || edad == "Seleccione un rango de años" || comentarios == ""){
         alert("Complete todos los campos solicitados, por favor.");
     }else{
+        document.getElementById("Animales").innerHTML = "";
         conexion().then(
             response => {
                         for (let i=0;i<response.animales.length;i++){
