@@ -84,7 +84,7 @@ add.addEventListener("click", function(){
 
 async function conexion(){
     try{
-        let response = await fetch(".../animales.json");
+        let response = await fetch("animales.json");
         let datos = await response.json();
         return datos;
     } catch (e){
